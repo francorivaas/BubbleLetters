@@ -119,62 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &153624095
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 153624096}
-  - component: {fileID: 153624097}
-  m_Layer: 0
-  m_Name: LetterSpawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &153624096
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 153624095}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &153624097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 153624095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05d8cb029aec6a04fb28ba4e94302016, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LetterSpawner
-  gameManager: {fileID: 1205595869}
-  letterPrefab: {fileID: 7340928093008539176, guid: 3c52f6a7d3723dc4da6d13dbba12951f, type: 3}
-  playArea: {fileID: 913490894}
-  initialLetterCount: 10
-  maximumLetterCount: 16
-  spawnInterval: 0.7
-  minimumSpeed: 0.8
-  maximumSpeed: 1.8
-  edgePadding: 0.4
-  neededLetterProbability: 0.55
-  maximumConsecutiveDistractors: 3
-  availableAlphabet: "ABCDEFGHIJKLMN\xD1OPQRSTUVWXYZ"
 --- !u!1 &432091610
 GameObject:
   m_ObjectHideFlags: 0
@@ -819,8 +763,8 @@ Transform:
   m_GameObject: {fileID: 913490892}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -15, z: 0}
-  m_LocalScale: {x: 8, y: 10, z: 1}
+  m_LocalPosition: {x: 0, y: -1.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 985120403}
@@ -869,7 +813,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 95.71069, y: 93.71451}
+  m_Size: {x: 4.2, y: 6.8}
   m_EdgeRadius: 0
 --- !u!1 &985120402
 GameObject:
@@ -1037,7 +981,7 @@ MonoBehaviour:
   patternText: {fileID: 673542130}
   timerText: {fileID: 1291193498}
   statusText: {fileID: 1464810589}
-  letterSpawner: {fileID: 153624097}
+  letterSpawner: {fileID: 1827199429}
 --- !u!1 &1291193496
 GameObject:
   m_ObjectHideFlags: 0
@@ -1537,7 +1481,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 619394802}
-  - {fileID: 153624096}
   - {fileID: 985120403}
   - {fileID: 432091614}
   - {fileID: 1157328846}
