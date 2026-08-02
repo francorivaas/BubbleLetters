@@ -39,6 +39,30 @@ public class LetterSpawner : MonoBehaviour
 
     public IReadOnlyList<FloatingLetter> ActiveLetters => activeLetters;
 
+    private void Awake()
+    {
+        if (playArea == null)
+            return;
+
+        if (playArea.offset != Vector2.zero)
+        {
+            Debug.LogWarning(
+                $"El PlayArea tenía un Offset incorrecto: {playArea.offset}. " +
+                "Se restableció automáticamente a (0, 0).",
+                playArea
+            );
+
+            playArea.offset = Vector2.zero;
+        }
+
+        Debug.Log(
+            $"PlayArea corregido | Centro: {playArea.bounds.center} | " +
+            $"Mínimo: {playArea.bounds.min} | " +
+            $"Máximo: {playArea.bounds.max}",
+            playArea
+        );
+    }
+
     public void BeginSpawning()
     {
         StopSpawning();
